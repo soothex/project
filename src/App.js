@@ -2,12 +2,23 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+function SayCheck(props) {
+  if(props.checkbox) {
+    return <p>Вы вас запомнить.</p>;
+  }
+  if(!props.checkbox){
+    return <p>Вы просили не запоминать вас.</p>;
+  }
+}
+
 class Logger extends React.Component {
   render() {
     return (
       <React.Fragment>
         <p>Ваш email: {this.props.email}</p>
         <p>Ваш пароль: {this.props.password}</p>
+        <SayCheck checkbox={this.props.checkbox} />
       </React.Fragment>
     );
   }
@@ -18,52 +29,50 @@ class App extends React.Component {
       super(props);
       this.state = {
         email: '',
-        password: ''
+        password: '',
+        checkbox: false
       };
-  
-      this.handleChange = this.handleChange.bind(this);
 
-      this.onChangePassword = this.onChangePassword.bind(this);
-      this.onChangeEmail = this.onChangeEmail.bind(this);
-
-      this.handleSubmit = this.handleSubmit.bind(this);
+      this.onChangeInputs = this.onChangeInputs.bind(this);
+      this.onSubmit = this.onSubmit.bind(this);
     }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  onChangeEmail(event) {
-    this.setState({email: event.target.value});
-  }
-  onChangePassword(event){
-    this.setState({password: event.target.value});
-  }
-
-  handleSubmit(event) {
-    console.log(event);
-  }
+    onChangeInputs(event){
+      if(event.target.type === 'checkbox'){
+        this.setState({
+          [event.target.name]: event.target.checked}
+        );
+      }
+      else{
+        this.setState({
+          [event.target.name]: event.target.value
+        });
+      }
+    }
+    onSubmit(event) {
+      event.preventDefault();
+    }
 
   render() {
     return (
     <React.Fragment>
-      <form className="form-signin" onSubmit={this.handleSubmit}>
+      <form className="form-signin" onSubmit={this.onSubmit}>
         <img className="mb-4" src={logo} alt="" width="72" height="72"/>
         <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
         <label for="inputEmail" className="sr-only">Email address</label>
-        <input type="email" id="inputEmail" className="form-control" name="email" placeholder="Email address" required onChange={this.onChangeEmail} />
+        <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required name="email" onChange={this.onChangeInputs} />
         <label for="inputPassword" className="sr-only">Password</label>
-        <input type="password" id="inputPassword" className="form-control" name="password" placeholder="Password" required  onChange={this.onChangePassword} />
+        <input type="password" id="inputPassword" className="form-control" placeholder="Password" required name="password" onChange={this.onChangeInputs} />
         <div className="checkbox mb-3">
           <label>
-            <input type="checkbox" value="remember-me" /> Remember me
+            <input type="checkbox" name="checkbox" onChange={this.onChangeInputs}/> Remember me
           </label>
         </div>
         <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         <p className="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
       </form>
       
-      <Logger email={this.state.email} password={this.state.password}/>
+      <Logger email={this.state.email} password={this.state.password} checkbox={this.state.checkbox}/>
     </React.Fragment>
     );
   }
