@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { Notificationer } from './components/notification';
 
 function SayCheck(props) {
   if(props.checkbox) {
@@ -27,12 +28,12 @@ function Switcher(props){
   }
 }
 
-function Notificationer(props){
+/*function Notificationer(props){
   if(props.switch){
     return <div class="alert alert-success" role="alert">Successful authentication</div>;
   }
   else return null
-}
+}*/
 
 class Logger extends React.Component {
   render() {
