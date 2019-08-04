@@ -73,10 +73,15 @@ export class RegistrationComponent extends React.Component {
         <img className="mb-4" src={logo} alt="" width="72" height="72"/>
         <Notificationer switch={this.state.notification} />
         <h1 className="h3 mb-3 font-weight-normal">Registration</h1>
-        <label for="inputEmail" className="sr-only">Email address</label>
-        <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required name="email" onChange={this.onChangeInputs} />
-        <label for="inputPassword" className="sr-only">Password</label>
-        <input type="password" id="inputPassword" className="form-control" placeholder="Password" required name="password" onChange={this.onChangeInputs} />
+        
+        <div className="form-group">
+          <label for="inputEmail" className="sr-only">Email address</label>
+          <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required name="email" onChange={this.onChangeInputs} />
+        </div>
+        <div className="form-group">
+          <label for="inputPassword" className="sr-only">Password</label>
+          <input type="password" id="inputPassword" className="form-control" placeholder="Password" required name="password" onChange={this.onChangeInputs} />
+        </div>
         <div className="checkbox mb-3">
           <label>
             <input type="checkbox" name="checkbox" onChange={this.onChangeInputs}/> Remember me

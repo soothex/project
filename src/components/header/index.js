@@ -24,6 +24,12 @@ export class Header extends React.Component {
                 <li class="nav-item">
                     <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Messages <span className="commingsoon">comming soon</span></a>
                 </li>
+                <li class="nav-item">
+                    <a className="nav-link" href="/settings/">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a className="nav-link" href="/auth/">Exit</a>
+                </li>
             </ul>
         )
     }
