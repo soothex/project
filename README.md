@@ -1,3 +1,23 @@
+## Description
+
+
+
+## Features
+- **Modern Admin Panel:** Elegant, entirely customizable and fully extensible admin panel.
+- **Secure by default:** Reusable policies, CSRF, CORS, P3P, Xframe, XSS, and more.
+- **Plugins Oriented:** Install auth system, content management, custom plugins, and more, in seconds.
+- **Blazing Fast:** Built on top of Node.js, Strapi delivers amazing performances.
+- **Front-end Agnostic:** Use any front-end frameworks (React, Vue, Angular, etc.), mobile apps or even IoT.
+- **Powerful CLI:** Scaffold projects and APIs on the fly.
+- **SQL & NoSQL databases:** Work with Mongo as a main database, also supports Postgres, MySQL, etc.
+
+## Contacts
+- [Discord](https://discord.gg/xxDJCty)
+- [Telegram](@sidirovich) (Bug reports and Feature requests only)
+- [VK.com](https://vk.com/sidirovich) (highly recommended for faster support)
+
+## Works for
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

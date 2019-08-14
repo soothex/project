@@ -1,6 +1,19 @@
 import React from 'react';
 import './friend.css';
 
+
+class PhotoFriendInnerBlock extends React.Component{
+    
+}
+
+class ButtonGroupInnerBlock extends React.Component{
+    
+}
+
+class BlockFriendInnerList extends React.Component{
+    
+}
+ 
 export class FriendListComponent extends React.Component {
 
     render() {

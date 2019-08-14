@@ -26,7 +26,7 @@ function AppRouter() {
       <Header />
       <div>
         <Route path="/" exact component={RegistrationComponent} />
-        <Route path="/auth/" exact component={Auth} />
+        <Route path="/auth/" component={Auth} />
         <Route path="/profile/" component={ProfileComponent} />
         <Route path="/friend/" component={FriendListComponent} />
         <Route path="/photo/" component={PhotoComponent} />

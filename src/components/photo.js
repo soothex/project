@@ -9,6 +9,15 @@ const Photo = styled.div`
     margin: 10px;
 `
 
+
+class PhotoExporter extends React.Component {
+
+}
+
+class PhotoImporter extends React.Component {
+    
+}
+
 export class PhotoComponent extends React.Component {
     constructor(props) {
         super(props);

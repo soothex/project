@@ -1,6 +1,22 @@
 import React from 'react';
 import { Header } from './header/';
 
+
+
+
+class UserPhoto extends React.Component {
+    
+}
+
+class UserDescription extends React.Component {
+    
+}
+
+class UserPublications extends React.Component {
+    
+}
+
+
 export class ProfileComponent extends React.Component {
 
     render() {
@@ -11,9 +27,11 @@ export class ProfileComponent extends React.Component {
                 <div className="card-body">
                     <div className="row">
                         <div className="col-lg-6">
+                            <UserPhoto />
                             <img src="/images/profile-example.jpg" width="100%" />
                         </div>
                         <div className="col-lg-6">
+                            <UserDescription />
                             <p><span>First Name:</span> Jenny Wheeler</p>
                             <p><span>Last Name:</span> Example</p>
                             <p><span>Age:</span> Example</p>
@@ -31,6 +49,7 @@ export class ProfileComponent extends React.Component {
             </div>
 
             <h2>Publications</h2>
+            <UserPublications />
             <div className="card">
                 <div className="card-body">
                     <div className="card">
