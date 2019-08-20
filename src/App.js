@@ -12,7 +12,7 @@ import { FriendListComponent } from './components/friendlist/';
 import { PhotoComponent } from './components/photo';
 import { SettingsComponent } from './components/setteings';
 
-import { Footer } from './components/footer';
+import Footer from './components/footer';
 
 import { Notificationer } from './components/notification';
 

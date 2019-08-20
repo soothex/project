@@ -8,6 +8,6 @@ import Store from './Store';
 
 const appStore = new Store();
 
-ReactDOM.render(<AppRouter store={appStore}/>, document.getElementById('root'));
+ReactDOM.render(<AppRouter Store={appStore}/>, document.getElementById('root'));
 
 serviceWorker.unregister();

@@ -1,22 +1,18 @@
 import { observable, decorate, action } from 'mobx';
 
-class Store {
-    userName = 'testtext'
-    userData = null
 
+class Store {
+    @observable userName = 'testtext'
+    @observable userData = null
+
+    @action.bound
     getRandomUser() {
-        fetch('https://randomuser.me/api/')
-            .then(res => res.json())
-            .then(json => {
-                this.userData = json.results;
+        fetch('https://randomuser.me/api/').then(res => res.json()).then(json => {
+                if(json.results){
+                    this.userData = json.results[0];
+                }
             })
     }
 }
-
-decorate(Store, {
-    User: observable,
-    userData: observable,
-    getRandomUser: action.bound,
-});
 
 export default Store;
