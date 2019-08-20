@@ -3,13 +3,11 @@
 
 
 ## Features
-- **Modern Admin Panel:** Elegant, entirely customizable and fully extensible admin panel.
-- **Secure by default:** Reusable policies, CSRF, CORS, P3P, Xframe, XSS, and more.
-- **Plugins Oriented:** Install auth system, content management, custom plugins, and more, in seconds.
-- **Blazing Fast:** Built on top of Node.js, Strapi delivers amazing performances.
-- **Front-end Agnostic:** Use any front-end frameworks (React, Vue, Angular, etc.), mobile apps or even IoT.
-- **Powerful CLI:** Scaffold projects and APIs on the fly.
-- **SQL & NoSQL databases:** Work with Mongo as a main database, also supports Postgres, MySQL, etc.
+- **Profile:** 
+- **Gallery:** 
+- **Friends List:**
+- **Posts:** 
+- **Front-end:** Used front-end frameworks Reacjs. Any tech Mobx.
 
 ## Contacts
 - [Discord](https://discord.gg/xxDJCty)
